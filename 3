@@ -1,0 +1,24 @@
+ internal class Program
+ {
+      static void Main(string[] args)
+      {
+            Food[] lunch = { new Pizza(), new Burger(), new Food() };
+            foreach (var f in lunch) f.Eat();
+            Console.ReadLine();
+      }
+ }
+
+class Food
+   {
+        public virtual void Eat() => Console.WriteLine("Едим...");
+   }
+  
+internal class Pizza : Food
+   {
+        public override void Eat() => Console.WriteLine("Едим пиццу!");
+   }
+   
+ internal class Burger : Food
+  {
+        public override void Eat() => Console.WriteLine("Едим бургер!");
+  }
